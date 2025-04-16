@@ -21,14 +21,13 @@ body {
 }
 
 .logo-large {
-    width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
 
 .product-title {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #000;
     margin-bottom: 20px;
 }
@@ -53,39 +52,42 @@ body {
 }
 
 .bonus {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     margin-top: 20px;
     color: #007BFF;
 }
 
 /* Testimonials Section */
+/* Se estructura cada testimonio para colocar el nombre encima y la foto de perfil a la izquierda del texto */
 .testimonials {
     margin-top: 30px;
 }
 
 .testimonial {
     margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 15px; /* Espaciado entre la foto y el texto */
-}
-
-.testimonial-content {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.testimonial img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
 }
 
 .testimonial-name {
     font-weight: bold;
     margin-bottom: 5px;
-    text-align: center; /* Centrar los nombres encima de la foto */
+}
+
+.testimonial-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.testimonial-details img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.testimonial-text {
+    margin: 0;
 }
 
 /* Right Section */
@@ -155,7 +157,22 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional Payment Options */
+@media (max-width: 768px) {
+    .payment-page {
+        flex-direction: column; /* Cambiar de filas a una sola columna */
+        gap: 20px; /* Espaciado entre las secciones */
+    }
+
+    .payment-left, .payment-right {
+        width: 100%; /* Hacer que ambas secciones ocupen todo el ancho */
+    }
+
+    .payment-right {
+        margin-top: 20px; /* Añadir un margen superior para separar del contenido */
+    }
+}
+
+/* Sección Opciones de Pago Adicional */
 .additional-payment {
     margin-top: 30px;
     text-align: center;
@@ -163,21 +180,24 @@ body {
     padding-top: 20px;
 }
 
-.paypal-option {
+.payment-option {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
 }
 
-.paypal-icon {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
+.paypal-option,
+.binance-option {
+    flex: 1;
+    text-align: center;
 }
 
-.paypal-button {
+.option-icon {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.option-button {
     display: inline-block;
     background-color: #0070BA;
     color: white;
@@ -185,47 +205,15 @@ body {
     padding: 10px 15px;
     font-size: 1em;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.paypal-button:hover {
+.option-button:hover {
     background-color: #005EA6;
 }
 
-.binance-option {
-    margin-top: 20px;
+.binance-details p {
+    margin: 5px 0;
     font-size: 1em;
     color: #333;
-}
-
-.binance-option p {
-    margin: 5px 0;
-}
-
-@media (max-width: 768px) {
-    .payment-page {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .payment-left, .payment-right {
-        width: 100%;
-    }
-
-    .payment-right {
-        margin-top: 20px;
-    }
-
-    .testimonial {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .testimonial-content {
-        text-align: center;
-    }
-
-    .testimonial img {
-        margin-bottom: 10px;
-    }
 }
