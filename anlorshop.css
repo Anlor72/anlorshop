@@ -1,0 +1,517 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Header */
+.offer-head {
+    width: 100%;
+    background-color: #00BFFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.offer-head a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo and Title */
+.logo {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 100px;
+}
+
+.title {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.highlight {
+    background-color: #00FFFF;
+    border-radius: 12px;
+    padding: 2px 5px;
+}
+
+.subtitle {
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: rgba(128, 128, 128, 0.7);
+    font-style: italic;
+}
+
+/* Introduction Section */
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 4px solid #404040;
+    border-radius: 50px;
+    padding: 5px 15px; /* Reducir tamaño de padding */
+    box-shadow: 0 0 10px rgba(64, 64, 64, 0.7); /* Reducir intensidad del shadow */
+    margin: 20px auto; /* Ajustar espacio superior e inferior */
+    max-width: 200px; /* Reducir ancho máximo */
+}
+
+.introduction img {
+    width: 35px; /* Incrementar tamaño del ícono */
+    height: 35px;
+    margin-right: 10px;
+    filter: invert(65%) sepia(94%) saturate(749%) hue-rotate(160deg) brightness(90%) contrast(95%); /* Cambiar color a celeste aqua marino */
+}
+
+.introduction h3 {
+    font-size: 1.0em; /* Aumentar tamaño del texto */
+    font-weight: bold;
+    color: white; /* Mantener el color del texto */
+    margin-left: 5px; /* Espaciado adicional para alineación visual */
+}
+
+
+
+/* Boxes Section */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    justify-content: center;
+}
+
+.box {
+    background-color: #121212;
+    border-radius: 12px;
+    border: 2px solid #505050;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.box img {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.box-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.box-subtitle {
+    color: lightgrey;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Animated Counter */
+.animated-container {
+    text-align: center;
+    margin-top: 40px;
+    border: 0.5px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.animated-text {
+    font-size: 3em;
+    font-weight: bolder;
+    padding: 1px;
+    background: linear-gradient(to bottom, #D3D3D3, #000000);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+    margin-bottom: 5px; /* Crear espacio entre el texto */
+}
+
+.animated-container p {
+    font-size: 1.1em; /* Reducir tamaño */
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Bonus Section */
+.bonus-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.bonus-section h2 {
+    font-size: 5.5em;
+    font-weight: bolder;
+    padding: 0px;
+    background: linear-gradient(to bottom, #D3D3D3, #000000);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+.bonus-box {
+    height: 450px;
+    width: 450px;
+    padding: 20px 10px;
+}
+
+.offer-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00BFFF;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(64, 64, 64, 0.7);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.offer-banner img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+h3 {
+    font-size: 2em; /* Aumentar el tamaño */
+    text-align: center;
+}
+
+.price-tag {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.original-price {
+    font-size: 1.5em;
+    text-decoration: line-through;
+    color: white;
+}
+
+.discount-price {
+    font-size: 2.5em;
+    color: white;
+}
+
+h4 {
+    font-size: 2.5em; /* Hacer más grande */
+    color: white;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.features-list {
+    list-style-type: none; /* Ocultar viñetas */
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por característica */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+.features-list li {
+    display: flex; /* Alinear ícono y texto horizontalmente */
+    align-items: center; /* Centrar ícono y texto verticalmente */
+}
+
+.features-list li img {
+    width: 25px; /* Tamaño del ícono */
+    height: 25px;
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    filter: invert(75%) sepia(57%) saturate(5000%) hue-rotate(160deg) brightness(90%) contrast(85%);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-box {
+    position: relative;
+    margin-top: 30px;
+    padding: 40px;
+    background-color: black;
+    border: 2px solid #404040;
+    border-radius: 25px;
+    max-width: 800px;
+    margin: auto;
+    color: white;
+    opacity: 0; /* Iniciar oculto */
+    transform: translateY(20px); /* Iniciar movido hacia abajo */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Suavizar efectos */
+}
+
+
+.payment-images {
+    position: absolute; /* Posicionamiento dentro de .animated-box */
+    bottom: 35px; /* Ubicación en la parte inferior */
+    right: 300px; /* Ubicación en la esquina derecha */
+    display: flex; /* Organizar imágenes en línea */
+    gap: 5px; /* Espaciado entre imágenes */
+    flex-wrap: wrap; /* Permitir varias filas si es necesario */
+}
+
+.payment-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+@media (max-width: 768px) {
+    .payment-images {
+        position: static; /* Anular posicionamiento absoluto */
+        margin-top: 10px; /* Espacio entre el botón y las imágenes */
+        display: flex;
+        justify-content: center; /* Centrar las imágenes debajo del botón */
+        gap: 10px; /* Espaciado entre las imágenes */
+        flex-wrap: wrap; /* Permitir múltiples filas si es necesario */
+    }
+
+    .payment-images img {
+        width: 30px; /* Reducir tamaño para pantallas pequeñas */
+        height: 30px;
+        border-radius: 5px; /* Bordes redondeados */
+    }
+
+    .cta-button {
+        margin-bottom: 20px; /* Crear espacio debajo del botón */
+    }
+}
+
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px; /* Reducir padding */
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 25px; /* Ajustar curvas */
+    font-size: 1em; /* Reducir tamaño de texto */
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+    margin: auto; /* Centrar botón */
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Animación suave */
+    box-shadow: 0 0 15px rgba(192, 192, 192, 1);
+}
+
+.cta-button img {
+    margin-left: 10px;
+    width: 15px; /* Reducir tamaño de emoji */
+    height: 15px;
+}
+
+
+
+
+/* FAQ Section */
+.faq {
+    text-align: center; /* Centralizar contenido */
+    max-width: 800px;
+    margin: 40px auto; /* Centrar el contenedor */
+    padding: 20px;
+    border: 2px solid #404040; /* Añadir borde para diseño */
+    border-radius: 15px;
+    background-color: #f9f9f9; /* Fondo claro para destacar */
+}
+
+.faq h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px; /* Espacio entre el título y el texto */
+}
+
+.faq p {
+    font-size: 1.2em; /* Tamaño del subtítulo */
+    color: #555;
+    margin-bottom: 20px; /* Espaciado debajo del texto */
+}
+
+/* FAQ Items */
+.faq-container {
+    border-bottom: 1px solid #ccc; /* Línea separadora entre preguntas */
+    padding: 15px 0;
+}
+
+.faq-item {
+    display: flex;
+    flex-direction: column; /* Ordenar en columna */
+    align-items: center; /* Centrar pregunta y respuesta */
+    cursor: pointer;
+    text-align: center; /* Asegurar centralización */
+    margin-bottom: 15px; /* Espaciado entre preguntas */
+}
+
+.faq-item h4 {
+    font-size: 1.2em; /* Tamaño del título */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px; /* Espaciado entre pregunta y respuesta */
+}
+
+.faq-item p {
+    display: none; /* Ocultar respuesta inicialmente */
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px; /* Espacio entre pregunta y respuesta */
+}
+
+.faq-item.active p {
+    display: block; /* Mostrar respuesta al hacer clic */
+}
+
+/* Icon Styles */
+.faq-item .icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Bordes redondeados */
+    background-color: #ddd; /* Fondo del ícono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-top: 5px; /* Espaciado con el texto */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: white;
+    color: black;
+    font-size: 0.9em;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 90%; /* Ajustar ancho para móviles */
+        height: auto; /* Ajustar altura automáticamente */
+        margin: auto; /* Centrar contenedores */
+        margin-bottom: 20px; /* Espaciado entre recuadros */
+    }
+
+    .box img {
+        width: 80%; /* Reducir tamaño de imágenes */
+        height: auto; /* Mantener proporciones */
+    }
+
+    .box-title {
+        font-size: 1.3em; /* Ajustar tamaño del título */
+    }
+
+    .box-subtitle {
+        font-size: 1em; /* Ajustar tamaño del subtítulo */
+        margin-top: 10px;
+    }
+
+    .box-container {
+        grid-template-columns: 1fr; /* Colocar en una sola columna */
+        gap: 20px; /* Espaciado entre recuadros */
+    }
+}
+
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px; /* Reducir tamaño de padding */
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 25px; /* Ajustar curvas */
+    font-size: 1em; /* Reducir tamaño de texto */
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.5); /* Reducir glow */
+    max-width: 200px; /* Limitar el ancho del botón */
+    margin: auto; /* Centrar */
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Suavizar hover */
+    box-shadow: 0 0 15px rgba(192, 192, 192, 1);
+}
+
+.cta-button img {
+    margin-left: 10px;
+    width: 15px; /* Reducir tamaño de emoji */
+    height: 15px;
+}
+
+
+.bonus-box {
+    height: 450px;
+    width: 450px;
+    padding: 20px 10px;
+    margin: auto;
+    text-align: center;
+}
+.price-container {
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid #404040;
+    border-radius: 25px;
+    padding: 15px 25px; /* Ajustar espacio interno */
+    max-width: 300px; /* Aumentar ancho */
+}
+
+.original-price {
+    font-size: 3em; /* Incrementar tamaño */
+    text-decoration: line-through;
+    color: white;
+}
+
+.discount-price {
+    font-size: 2.5em; /* Incrementar tamaño */
+    color: white;
+}
+
+
