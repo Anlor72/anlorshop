@@ -34,8 +34,8 @@ document.addEventListener("scroll", function() {
 });
 
 function toggleFaq(faqId) {
-    const faq = document.getElementById(faqId);
-    const parent = faq.parentElement;
+    const faqItem = document.getElementById(faqId);
+    faqItem.parentElement.classList.toggle('active'); 
 
     if (faq.style.display === "none" || faq.style.display === "") {
         faq.style.display = "block";
@@ -55,10 +55,10 @@ function toggleFaq(faqId) {
 
     if (faq.style.display === "none" || faq.style.display === "") {
         faq.style.display = "block";
-        parent.classList.add('active'); // Clase activa
+        parent.classList.add('active'); 
     } else {
         faq.style.display = "none";
-        parent.classList.remove('active'); // Eliminar clase activa
+        parent.classList.remove('active'); 
     }
 }
 window.addEventListener("scroll", function () {
@@ -67,11 +67,11 @@ window.addEventListener("scroll", function () {
     const screenHeight = window.innerHeight;
 
     if (boxPosition < screenHeight - 100) {
-        animatedBox.style.opacity = "1"; // Cambiar opacidad
-        animatedBox.style.transform = "translateY(0)"; // Regresar a posición original
+        animatedBox.style.opacity = "1"; 
+        animatedBox.style.transform = "translateY(0)"; 
     } else {
-        animatedBox.style.opacity = "0"; // Ocultar al hacer scroll hacia arriba
-        animatedBox.style.transform = "translateY(20px)"; // Mover hacia abajo
+        animatedBox.style.opacity = "0"; 
+        animatedBox.style.transform = "translateY(20px)"; 
     }
 });
 
