@@ -7,14 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="payment.css">
   <script>
-    fetch('https://anlor-backend.onrender.com/api/paypal-client-id') // ✅ Cambia a la URL de Render
+    fetch('https://anlor-backend.onrender.com/api/paypal-client-id')
         .then(response => response.json())
         .then(data => {
             const script = document.createElement("script");
             script.src = `https://www.paypal.com/sdk/js?client-id=${data.clientId}&currency=USD`;
-            script.onload = function() {
-                initializePayPalButton();
+            
+            script.onload = function() {  
+                initializePayPalButton(); // ⚠️ Asegura que PayPal está cargado antes de ejecutarlo
             };
+            
             document.head.appendChild(script);
         })
         .catch(error => console.error('Error al obtener el Client ID de PayPal:', error));
