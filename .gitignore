@@ -1,0 +1,27 @@
+# 🔒 Archivos sensibles
+.env  # Tus credenciales API, incluidas las de PayPal
+
+# 🔄 Dependencias de Node.js
+node_modules/  # Evita subir la carpeta de dependencias (puede reinstalarse con npm install)
+
+# 🏗 Archivos generados automáticamente
+package-lock.json  # Se puede regenerar automáticamente con npm install
+
+# 🖼 Caché y configuración
+.DS_Store  # Si usas macOS, evita subir archivos del sistema
+Thumbs.db  # Archivos de caché en Windows
+
+# 🗑 Logs y archivos temporales
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ⚙️ Configuración del editor
+.vscode/  # Configuración personalizada de Visual Studio Code
+.idea/  # Configuración de WebStorm y otros editores JetBrains
+
+# ⚡ Evitar archivos de construcción temporal
+dist/
+build/
