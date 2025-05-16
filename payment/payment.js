@@ -11,9 +11,9 @@ fetch('https://anlor-backend.onrender.com/api/paypal-client-id') // ✅ Cambia a
             },
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
-                    alert('Pago completado por ' + details.payer.name.given_name);
+                    alert('Payment Completed from ' + details.payer.name.given_name);
                 });
             }
         }).render('#paypal-button-container');
     })
-    .catch(error => console.error('Error al cargar PayPal:', error));
+    .catch(error => console.error('Error to Load Paypal', error));
