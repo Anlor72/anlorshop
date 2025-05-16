@@ -25,3 +25,4 @@ yarn-error.log*
 # ⚡ Evitar archivos de construcción temporal
 dist/
 build/
+".env" 
