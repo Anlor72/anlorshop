@@ -6,6 +6,7 @@
   <title>Ultimate Folder Editing - Payment</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="payment.css">
+  <link rel="icon" href="images/Ultimate Folder Editing.ico" type="image/x-icon">
   <script>
     fetch('https://anlor-backend.onrender.com/api/paypal-client-id')
         .then(response => response.json())
@@ -14,7 +15,7 @@
             script.src = `https://www.paypal.com/sdk/js?client-id=${data.clientId}&currency=USD`;
             
             script.onload = function() {  
-                initializePayPalButton(); // ⚠️ Asegura que PayPal está cargado antes de ejecutarlo
+                initializePayPalButton(); 
             };
             
             document.head.appendChild(script);
