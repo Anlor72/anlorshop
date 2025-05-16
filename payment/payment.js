@@ -5,7 +5,7 @@ fetch('https://anlor-backend.onrender.com/api/paypal-client-id') // ✅ Cambia a
             createOrder: function(data, actions) {
                 return actions.order.create({
                     purchase_units: [{
-                        amount: { value: '27.00', currency_code: 'USD' }
+                        amount: { value: '1.00', currency_code: 'USD' }
                     }]
                 });
             },
